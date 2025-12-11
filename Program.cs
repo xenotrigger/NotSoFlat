@@ -22,20 +22,25 @@ namespace Flat
 
             Take.Answer2();
 
-            SomeMethod();
+            int ResultAdd1 = SomeMethod();
+            WriteLine($"Your favorite number plus 1 is {ResultAdd1}");
 
             Print.Conclusion();
 
             Print.Exit();
         }
 
-        static void SomeMethod()
+        static int SomeMethod()
         {   
             WriteLine("What is your favorite number?  Lets add 1 to it");
+
             string? input = ReadLine();
             int SomeParameter = int.Parse(input!);
-            int SomeParameterAnd1 = SomeParameter + 1 ;
-            WriteLine($"Your favorite number is {SomeParameter} and plus 1 is {SomeParameterAnd1}");
+
+            int result = SomeParameter + 1 ;
+            
+
+            return result;
         }
     }
 }
